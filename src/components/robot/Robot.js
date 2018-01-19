@@ -4,6 +4,7 @@ import Head from './Head';
 import Body from './Body';
 import Arm from './Arm';
 import Leg from './Leg';
+import Eye from './Eye';
 
 class Robot extends Component {
   constructor() {
@@ -18,6 +19,7 @@ class Robot extends Component {
       <Body/>
       <Arm/>
       <Leg/>
+      <Eye/>
       </div>
     );
   }
