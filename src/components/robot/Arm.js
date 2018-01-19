@@ -8,8 +8,6 @@ class Arm extends Component {
   }
 
   render() {
-    const { arm } = this.props;
-
     return (
       <div className="Arm"></div>
     );
