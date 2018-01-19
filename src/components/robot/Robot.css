@@ -1,0 +1,70 @@
+.Robot {
+  height: 80%;
+  background: green;
+  position: relative;
+}
+
+.Head {
+  height: 20%;
+  width: 40%;
+  background: gray;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform:  translateX(-50%);
+}
+
+.Body {
+  height: 30%;
+  width: 55%;
+  background: gray;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform:  translateX(-50%);
+}
+
+.Arm {
+  height: 10%;
+  width: 17%;
+  background: gray;
+  position: absolute;
+  top: 40%;
+  left: 84%;
+  transform:  translateX(-75%);
+  animation-name: arm-move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes arm-move {
+  from {
+    transform: translateX(-52%) rotate(7deg);
+  }
+  to {
+    transform: translateX(-48%) rotate(-7deg);
+  }
+}
+
+.left {
+  height: 20%;
+  width: 10%;
+  background: gray;
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  /* transform: translateX(-75%); */
+}
+.right {
+  height: 20%;
+  width: 10%;
+  background: gray;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  /* transform: translateX(-75%); */
+}
+
+
