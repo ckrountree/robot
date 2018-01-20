@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import './Robot.css';
 
 class Eye extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
 
   render() {
     const { eye } = this.props;
