@@ -9,7 +9,19 @@
   width: 40%;
   background: gray;
   position: absolute;
-  top: 15%;
+  top: 13%;
+  left: 50%;
+  transform:  translateX(-50%);
+  border: solid 0.3em gray;
+  border-bottom-color: black;
+}
+
+.Mouth {
+  height: 2%;
+  width: 10%;
+  background: darkgray;
+  position: absolute;
+  top: 30%;
   left: 50%;
   transform:  translateX(-50%);
 }
@@ -33,7 +45,7 @@
   left: 84%;
   transform:  translateX(-75%);
   animation-name: arm-move;
-  animation-duration: 1s;
+  animation-duration: 0.75s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
@@ -41,14 +53,14 @@
 
 @keyframes arm-move {
   from {
-    transform: translateX(-52%) rotate(7deg);
+    transform: translateX(-53%) rotate(7deg);
   }
   to {
-    transform: translateX(-48%) rotate(-7deg);
+    transform: translateX(-47%) rotate(-7deg);
   }
 }
 
-.left {
+.left-leg {
   height: 20%;
   width: 10%;
   background: gray;
@@ -57,7 +69,7 @@
   left: 45%;
 }
 
-.right {
+.right-leg {
   height: 20%;
   width: 10%;
   background: gray;
@@ -73,7 +85,7 @@
   position: absolute;
   top: 20%;
   left: 45%;
-  transform:  translateX(-50%);
+  border-radius: 50%;
 }
 
 .right-eye {
@@ -83,5 +95,6 @@
   position: absolute;
   top: 20%;
   left: 50%;
+  border-radius: 50%;
 }
 

@@ -9,15 +9,15 @@ class Leg extends Component {
     return (
       <div>
         <div 
-          className="left"
+          className="left-leg"
           style={{
-            transform:  "left" ? 'translateX(-90%)' : 'translateX(25%)'
+            transform:  "left-leg" ? 'translateX(-90%)' : 'translateX(25%)'
           }}
         ></div>
         <div 
-          className="right"
+          className="right-leg"
           style={{
-            transform:  "right" ? 'translateX(90%)' : 'translateX(-90%)'
+            transform:  "right-leg" ? 'translateX(90%)' : 'translateX(-90%)'
           }}
         ></div>
       </div>
