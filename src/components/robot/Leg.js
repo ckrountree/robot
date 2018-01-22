@@ -4,8 +4,6 @@ import './Robot.css';
 class Leg extends Component {
 
   render() {
-    const { leg } = this.props;
-
     return (
       <div>
         <div 

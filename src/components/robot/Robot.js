@@ -6,14 +6,26 @@ import Eye from './Eye';
 import Body from './Body';
 import Arm from './Arm';
 import Leg from './Leg';
+import Audio from '../controls/Audio';
 
 class Robot extends Component {
-  constructor() {
-    super();
-    this.state = {};
+  constructor(props) {
+    super(props);
+    this.state = {audioOn: true};
+
+    // this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(event) {
+    this.setState(prevState => ({
+      audioOn: !prevState.audioOn
+    }));
+    event.preventDefault()
   }
 
   render() {
+    const { audioOn }= this.state;
+
     return (
       <div className="Robot">
       <Head/>
@@ -22,6 +34,8 @@ class Robot extends Component {
       <Body/>
       <Arm/>
       <Leg/>
+      <Audio audioOn={audioOn}
+        onClick={audioOn => this.handleClick(audioOn)}/>
       </div>
     );
   }

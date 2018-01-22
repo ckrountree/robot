@@ -4,8 +4,6 @@ import './Robot.css';
 class Eye extends Component {
 
   render() {
-    const { eye } = this.props;
-
     return (
       <div>
         <div 
