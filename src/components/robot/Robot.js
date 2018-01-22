@@ -20,7 +20,7 @@ class Robot extends Component {
     this.setState(prevState => ({
       audioOn: !prevState.audioOn
     }));
-    event.preventDefault()
+       event.preventDefault()
   }
 
   render() {

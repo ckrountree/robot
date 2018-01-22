@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
-// import './Robot.css';
+import '../robot/Robot.css';
 
-let buttonStyle = { margin: '10px 10px 10px 0' };
+let buttonStyle = { 
+  position: 'fixed',
+  bottom: '10px',
+  height: '40px',
+  width: '100px'
+};
 
 class AudioButton extends Component {
   render() {
     const { onAudioChange } = this.props;
 
     return (
-      <button type="button" className="Audio" 
+      <div className="audio">
+      <button type="button" className="audio-button" 
         style={buttonStyle}
-        onClick={(event) => onAudioChange}></button>
+        onClick={(event) => onAudioChange}>AUDIO</button>
+      </div>
     );
   }
 }
