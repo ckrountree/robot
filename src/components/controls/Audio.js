@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Sound from 'react-sound';
+// import Sound from 'react-sound';
+import ReactAudioPlayer from 'react-audio-player';
 import '../robot/Robot.css';
 
 let buttonStyle = { 
@@ -18,11 +19,12 @@ class AudioButton extends Component {
       <button type="button" className="audio-button" 
         style={buttonStyle}
         onClick={(event) => onAudioChange(event.target)}>AUDIO</button>
-        <Sound
-          url="cool_sound.mp3"
-          playStatus={Sound.status.PLAYING}
-          playFromPosition={300}
-    />
+      <ReactAudioPlayer
+        src="Countdown-Me-728881159.mp3"
+        autoPlay
+        preload= "auto"
+        volume="0.5"
+      />
       </div>
     );
   }
