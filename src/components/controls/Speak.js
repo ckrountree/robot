@@ -1,39 +1,59 @@
 import React, { Component } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
-import Button from './Button';
+import AudioPlayer from './AudioPlayer';
+import PropTypes from 'prop-types';
 
-class Speak extends Component {
+export default class Speak extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      audioOn: false,
-      url: 'https://www.icloud.com/iclouddrive/0rUSCw5VlhTacr0W70Spqx7rw#Countdown-Me-728881159.mp3',
-      audio: new Audio(this.url)
-    }
-    this.handleClick = this.handleClick.bind(this);
+    this.state = { audioOn: false };
+    this.url = 'http://bit.ly/2nvjy10';
+    this.audio = {};
+    // this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState(previousState => ({
-      audioOn: true
-    }));
+
+  onPlay = (e) => {
+    if (this.state.audioOn) {
+      this.setState({audioOn: false});
+      this.audioOn.onPause();
+    } else {
+      this.setState({ audioOn: true });
+      this.audioOn.onPlay();
+    }
   }
+
+  componentWillReceiveProps() {
+    this.setState({ audioOn: true });
+}
 
   render() {
     return (
-      <div className="audio">
-        <Button onClick={this.handleClick} audio={this.state.audioOn}/>
+      <div>
+        <AudioPlayer/>
+      <div 
+        onClick={this.onPlay} 
+        className={!this.state.audioOn ? 'Play' : 'Pause'}>
         <ReactAudioPlayer
           src={this.state.url}
-          ref={ (audioOn) => { this.audioOn = audioOn } }
+          ref={(audio) => { this.audioOn = audio; }}
           autoPlay
           preload= "auto"
-          volume={1}
+          volume={0.5}
         />
+      </div>
+      <div id="audio">
+        <button id="speak-btn" type="button" onClick={this.onPlay} ref={(speakBtn) => { this.speakBtn = speakBtn }}></button>
+      </div>
       </div>
     );
   }
-}
+};
 
-export default Speak;
+Speak.propTypes = {
+  audioOn: PropTypes.bool,
+  url: PropTypes.string,
+  audio: PropTypes.object
+};
+
 
