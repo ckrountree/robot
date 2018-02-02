@@ -4,39 +4,7 @@
   position: relative;
 }
 
-.Head {
-  height: 20%;
-  width: 40%;
-  background: gray;
-  position: absolute;
-  top: 13%;
-  left: 50%;
-  transform:  translateX(-50%);
-  border: solid 0.3em gray;
-  border-bottom-color: black;
-}
-
-.Mouth {
-  height: 2%;
-  width: 10%;
-  background: darkgray;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform:  translateX(-50%);
-}
-
-.Body {
-  height: 30%;
-  width: 55%;
-  background: gray;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform:  translateX(-50%);
-}
-
-.Arm {
+.arm {
   height: 10%;
   width: 17%;
   background: gray;
@@ -53,32 +21,14 @@
 
 @keyframes arm-move {
   from {
-    transform: translateX(-53%) rotate(7deg);
+    transform: translateX(-53%) rotate(8deg);
   }
   to {
-    transform: translateX(-47%) rotate(-7deg);
+    transform: translateX(-47%) rotate(-8deg);
   }
 }
 
-.left-leg {
-  height: 20%;
-  width: 10%;
-  background: gray;
-  position: absolute;
-  top: 60%;
-  left: 45%;
-}
-
-.right-leg {
-  height: 20%;
-  width: 10%;
-  background: gray;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-}
-
-.left-eye {
+.eye-left {
   height: 15px;
   width: 15px;
   background: black;  
@@ -88,7 +38,7 @@
   border-radius: 50%;
 }
 
-.right-eye {
+.eye-right {
   height: 15px;
   width: 15px;
   background: black;  
@@ -98,13 +48,69 @@
   border-radius: 50%;
 }
 
-.audio {
+.head {
+  height: 20%;
+  width: 40%;
+  background: gray;
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform:  translateX(-50%);
+  border: solid 0.3em gray;
+  border-bottom-color: black;
+}      
+
+.leg-left {
+  height: 20%;
+  width: 10%;
+  background: gray;
+  position: absolute;
+  top: 60%;
+  left: 45%;
+}  
+
+.leg-right {
+  height: 20%;
+  width: 10%;
+  background: gray;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+}  
+
+.mouth {
+  height: 2%;
+  width: 10%;
+  background: darkgray;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform:  translateX(-50%);
+}      
+
+.trunk {
+  height: 30%;
+  width: 55%;
+  background: gray;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform:  translateX(-50%);
+}      
+
+
+#audio {
   display: flex;
-  align-items: flex-end;
+  /* flex-direction: column; */
+  /* align-self: flex-end; */
   justify-content: center; 
 }
 
-.audio-button {
+#speak-btn {
+  height: 30px;
+  width: 80px;
+  position: absolute;
+  bottom: -10%;
   background-color: green;
   color: white;
   padding: 10px 24px;
@@ -116,11 +122,11 @@
   cursor: pointer;
 }
 
-.audio-button:hover {background-color: #3e8e41}
+/* .audio-button:hover {background-color: #3e8e41}
 
 .audio-button:active {
   background-color: #3e8e41;
   box-shadow: 0 3px gray;
   transform: translateY(4px);
 }
-
+ */

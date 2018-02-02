@@ -7,15 +7,15 @@ class Eye extends Component {
     return (
       <div>
         <div 
-          className="left-eye"
+          className="eye-left"
           style={{
-            transform:  "left" ? 'translateX(-90%)' : 'translateX(25%)'
+            transform:  "eye-left" ? 'translateX(-90%)' : 'translateX(25%)'
           }}
         ></div>
         <div 
-          className="right-eye"
+          className="eye-right"
           style={{
-            transform:  "right" ? 'translateX(90%)' : 'translateX(-90%)'
+            transform:  "eye-right" ? 'translateX(90%)' : 'translateX(-90%)'
           }}
         ></div>
       </div>
