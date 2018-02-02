@@ -43,7 +43,7 @@ export default class Speak extends Component {
         />
       </div>
       <div id="audio">
-        <button id="speak-btn" type="button" onClick={this.onPlay} ref={(speakBtn) => { this.speakBtn = speakBtn }}></button>
+        <button id="speak-btn" type="button" onClick={this.onPlay} ref={(speakBtn) => { this.speakBtn = speakBtn }}>SPEAK</button>
       </div>
       </div>
     );
