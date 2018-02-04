@@ -99,14 +99,14 @@
 }      
 
 
-#audio {
+.audio {
   display: flex;
   /* flex-direction: column; */
   /* align-self: flex-end; */
   justify-content: center; 
 }
 
-#speak-btn {
+.speak-btn {
   height: 30px;
   width: 80px;
   position: absolute;
