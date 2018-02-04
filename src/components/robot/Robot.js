@@ -8,7 +8,7 @@ class Robot extends Component {
     return (
       <div className="Robot">
         <BodyParts/>
-        <Speak/>
+        <Speak url="/sound/Countdown.mp3"/>
       </div>
     );
   }
