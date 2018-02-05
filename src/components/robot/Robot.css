@@ -130,3 +130,15 @@
   transform: translateY(4px);
 }
  */
+
+.translateX90 {
+  transform: translateX(90%);
+}
+
+.translateXm90 {
+  transform: translateX(-90%);
+}
+
+.translateX25 {
+  transform: translateX(25%);
+}
