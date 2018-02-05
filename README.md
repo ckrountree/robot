@@ -1,7 +1,7 @@
 # robot
 ReactJS
 
-This robot should demonstrate some waving animation and be able to speak.
+This robot should demonstrate some waving animation and be able to speak when the speak button is clicked.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
