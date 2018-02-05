@@ -7,8 +7,7 @@ class BodyParts extends Component {
   render() {
     return (
       <div>
-        <div className="arm">
-        </div>
+        <div className="arm"/>
 
         <EyesLegs 
           parentClass="head" 
@@ -24,11 +23,9 @@ class BodyParts extends Component {
           ]}
         />
 
-        <div className="mouth">
-        </div>
+        <div className="mouth"/>
 
-        <div className="trunk">
-        </div>
+        <div className="trunk"/>
 
         <EyesLegs 
           dupParts={[
