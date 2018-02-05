@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EyesLegs from './EyesLegs';
 import './Robot.css';
 
 class BodyParts extends Component {
@@ -9,20 +10,19 @@ class BodyParts extends Component {
         <div className="arm">
         </div>
 
-        <div className="head">
-          <div 
-            className="eye-left"
-            style={{
-              transform:  "eye-left" ? 'translateX(-90%)' : 'translateX(25%)'
-            }}>
-          </div>
-          <div 
-            className="eye-right"
-            style={{
-              transform:  "eye-right" ? 'translateX(90%)' : 'translateX(-90%)'
-            }}>
-          </div>
-        </div>
+        <EyesLegs 
+          parentClass="head" 
+          dupParts={[
+            {
+              id: 0, 
+              className: 'eye-left translateXm90'
+            },
+            {
+              id: 1,
+              className: 'eye-right translateX90'
+            }
+          ]}
+        />
 
         <div className="mouth">
         </div>
@@ -30,20 +30,18 @@ class BodyParts extends Component {
         <div className="trunk">
         </div>
 
-        <div>
-          <div 
-            className="leg-left"
-            style={{
-              transform:  "leg-left" ? 'translateX(-90%)' : 'translateX(25%)'
-            }}>
-          </div>
-          <div 
-            className="leg-right"
-            style={{
-              transform:  "leg-right" ? 'translateX(90%)' : 'translateX(-90%)'
-            }}>
-          </div>
-      </div>
+        <EyesLegs 
+          dupParts={[
+            {
+              id: 0,
+              className: 'leg-left translateXm90'
+            },
+            {
+              id: 1,
+              className: 'leg-right translateX90'
+            }
+          ]}
+        />
 
       </div>
     );

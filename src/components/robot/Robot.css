@@ -6,14 +6,13 @@
 
 .arm {
   height: 10%;
-  width: 17%;
+  width: 12%;
   background: gray;
   position: absolute;
-  top: 40%;
-  left: 84%;
-  transform:  translateX(-75%);
+  top: 43%;
+  left: 80%;
   animation-name: arm-move;
-  animation-duration: 0.75s;
+  animation-duration: 0.80s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
@@ -21,10 +20,10 @@
 
 @keyframes arm-move {
   from {
-    transform: translateX(-53%) rotate(8deg);
+    transform: translateX(-53%) rotate(7deg);
   }
   to {
-    transform: translateX(-47%) rotate(-8deg);
+    transform: translateX(-47%) rotate(-7deg);
   }
 }
 
@@ -98,11 +97,8 @@
   transform:  translateX(-50%);
 }      
 
-
 .audio {
   display: flex;
-  /* flex-direction: column; */
-  /* align-self: flex-end; */
   justify-content: center; 
 }
 
@@ -113,20 +109,29 @@
   bottom: -10%;
   background-color: green;
   color: white;
-  padding: 10px 24px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 3px gray;
   text-decoration: none;
   font-size: 16px;
-  cursor: pointer;
 }
 
-/* .audio-button:hover {background-color: #3e8e41}
+.translateX90 {
+  transform: translateX(90%);
+}
 
-.audio-button:active {
+.translateXm90 {
+  transform: translateX(-90%);
+}
+
+.translateX25 {
+  transform: translateX(25%);
+}
+
+.speak-btn:hover {background-color: #3e8e41}
+
+.speak-btn:active {
   background-color: #3e8e41;
   box-shadow: 0 3px gray;
   transform: translateY(4px);
 }
- */
